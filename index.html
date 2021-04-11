@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/header.jpg">
+    <link rel="icon" href="/themes/yilia/source/">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -103,7 +103,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -196,6 +196,8 @@
 </ul>
 <p><strong>MyBatis虽然没有Hibernate方便，但是这种半自动化的方式提高了框架的灵活性，开发者可以根据具体的业务需求，完成定制化的持久层解决方案</strong></p>
 <p>MyBatis是一款优秀的持久框架，它支持自定义sql,存储过程及高级映射，MyBatis简化了几乎所有的JDBC代码,以及设置参数，获取结果集对象的工作。MyBatis可以通过简单的XML配置或注解来配置映射关系。</p>
+<!--  more  -->
+
 <p><strong>复习JDBC</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.注册驱动</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line"><span class="comment">//2.获取连接</span></span><br><span class="line">Connection connection = Drivermanager.getConnection(url,username,password); </span><br><span class="line"><span class="comment">//3.定义sql</span></span><br><span class="line">String sql = <span class="string">&quot;select * from student where id = ?&quot;</span>;</span><br><span class="line"><span class="comment">//4.预编译</span></span><br><span class="line">PreparedStatement statement = connection.preparedStatement(sql);</span><br><span class="line"><span class="comment">//5.设置参数</span></span><br><span class="line">statement.setInteger(<span class="number">1</span>,<span class="number">2001</span>);</span><br><span class="line"><span class="comment">//6. 执行sql，封装结果</span></span><br><span class="line">ResultSet result = statement.executeQuery();</span><br></pre></td></tr></table></figure>
 
@@ -520,6 +522,11 @@
 
       
 
+		
+		
+		  <div hidden="hidden"></div>
+		
+
       
     </div>
     <div class="article-info article-info-index">
@@ -592,6 +599,11 @@
 <p><a target="_blank" rel="noopener" href="http://www.codesheep.cn/">www.codesheep.cn</a></p>
 
       
+
+		
+		
+		  <div hidden="hidden"></div>
+		
 
       
     </div>
@@ -673,6 +685,11 @@
 
       
 
+		
+		
+		  <div hidden="hidden"></div>
+		
+
       
     </div>
     <div class="article-info article-info-index">
@@ -725,7 +742,6 @@
     		&copy; 2021 John Doe
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
