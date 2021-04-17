@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>MyBatis | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MyBatis1.概述   主流的ORM框架，之前叫做iBatis,后更名为MyBatis(ORM还有一个主流的框架，Hibernate)  二者区别  MyBatis:半自动ORM框架 框架值提供一部分功能，剩下的要我们手动完成即MyBatis没有提供pojo与数据库表的映射，它只是实现了pojo和SQL之间的映射关系，需要开发者自定义SQL语句，以及数据与pojo之间的装配关系  Hibern">
+  <meta name="description" content="MyBatis1.概述   主流的ORM框架，之前叫做iBatis,后更名为MyBatis(ORM还有一个主流的框架，Hibernate)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyBatis">
 <meta property="og:url" content="http://example.com/2021/04/11/MyBatis/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MyBatis1.概述   主流的ORM框架，之前叫做iBatis,后更名为MyBatis(ORM还有一个主流的框架，Hibernate)  二者区别  MyBatis:半自动ORM框架 框架值提供一部分功能，剩下的要我们手动完成即MyBatis没有提供pojo与数据库表的映射，它只是实现了pojo和SQL之间的映射关系，需要开发者自定义SQL语句，以及数据与pojo之间的装配关系  Hibern">
+<meta property="og:description" content="MyBatis1.概述   主流的ORM框架，之前叫做iBatis,后更名为MyBatis(ORM还有一个主流的框架，Hibernate)">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/dell/Pictures/java截图/HelloMyBatis结构截图.png">
 <meta property="og:image" content="c:/Users/dell/Pictures/java截图/Account.png">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="c:/Users/dell/Pictures/java截图/懒加载图片2.png">
 <meta property="og:image" content="c:/Users/dell/Pictures/java截图/懒加载执行图例2.0.png">
 <meta property="article:published_time" content="2021-04-11T08:55:42.000Z">
-<meta property="article:modified_time" content="2021-04-11T10:08:11.919Z">
+<meta property="article:modified_time" content="2021-04-12T15:09:40.430Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/dell/Pictures/java截图/HelloMyBatis结构截图.png">
@@ -73,6 +73,11 @@
 	        
 			</ul>
 		</nav>
+		
+		<nav>
+		    总文章数 3
+		</nav>
+		
 		<nav class="header-smart-menu">
     		
     			
@@ -100,6 +105,8 @@
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2258928962&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
+		        
+					<a class="mail" target="_blank" href="/2258928962@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -144,6 +151,8 @@
 			        
 						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2258928962&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
+						<a class="mail" target="_blank" href="/2258928962@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
 				</div>
 			</nav>
 
@@ -173,7 +182,22 @@
     
       <header class="article-header">
 	  
-        
+        	
+		
+		
+			
+			<!--显示阅读次数-->
+			
+			  <br/>
+			  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+			  <span class="icon-sort"></span>
+			  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+			  	阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+			  </span>
+			  </a>
+			
+			<!--显示阅读次数完毕-->
+			
         
         <a href="/2021/04/11/MyBatis/" class="archive-article-date">
   	<time datetime="2021-04-11T08:55:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-11</time>
@@ -194,6 +218,8 @@
 
       
         <h1 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><p>   主流的ORM框架，之前叫做iBatis,后更名为MyBatis(ORM还有一个主流的框架，Hibernate)</p>
+<span id="more"></span>
+
 <ul>
 <li><p>二者区别</p>
 <ul>
@@ -533,6 +559,10 @@
 </ul>
 
       
+		  
+		  
+		  
+
 
 		
 		
@@ -576,6 +606,11 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/themes/yilia/source/assets/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -859,7 +894,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;经过这么多年的学习&lt;br&gt;我还是个菜鸡&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     
